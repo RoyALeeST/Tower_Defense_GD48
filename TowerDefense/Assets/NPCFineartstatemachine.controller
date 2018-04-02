@@ -44,24 +44,11 @@ MonoBehaviour:
   speed: 2
   rotSpeed: 1
   accuracy: 3
+<<<<<<< HEAD
 --- !u!114 &114067588655290228
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c1610a08b9294c4eb0a458625662d60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NPC: {fileID: 0}
-  agent: {fileID: 0}
-  Opponent: {fileID: 0}
-  speed: 2
-  rotSpeed: 1
-  accuracy: 3
+=======
 --- !u!114 &114161134334589530
+>>>>>>> Programming
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -69,7 +56,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
+  m_Script: {fileID: 11500000, guid: 9c1610a08b9294c4eb0a458625662d60, type: 3}
+=======
   m_Script: {fileID: 11500000, guid: 963893d768b485b4f974c5a9420a451b, type: 3}
+>>>>>>> Programming
   m_Name: 
   m_EditorClassIdentifier: 
   NPC: {fileID: 0}
@@ -78,7 +69,36 @@ MonoBehaviour:
   speed: 2
   rotSpeed: 1
   accuracy: 3
+<<<<<<< HEAD
+--- !u!114 &114161134334589530
+=======
+--- !u!114 &114225138172461886
+>>>>>>> Programming
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+<<<<<<< HEAD
+  m_Script: {fileID: 11500000, guid: 963893d768b485b4f974c5a9420a451b, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: 512789c2eb05f9446b3a9dc99d4079e9, type: 3}
+>>>>>>> Programming
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPC: {fileID: 0}
+  agent: {fileID: 0}
+  Opponent: {fileID: 0}
+  speed: 2
+  rotSpeed: 1
+  accuracy: 3
+<<<<<<< HEAD
 --- !u!114 &114186063450589534
+=======
+--- !u!114 &114665377430389094
+>>>>>>> Programming
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -86,7 +106,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: a9d423d2156dbf7438cbf411d51e9f8f, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: 10e719737d3d10b4c8474e40f1eb9419, type: 3}
+>>>>>>> Programming
   m_Name: 
   m_EditorClassIdentifier: 
   NPC: {fileID: 0}
@@ -95,7 +119,11 @@ MonoBehaviour:
   speed: 2
   rotSpeed: 1
   accuracy: 3
+<<<<<<< HEAD
 --- !u!114 &114836929261222506
+=======
+--- !u!114 &114808741744464486
+>>>>>>> Programming
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -103,10 +131,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 2171d5ea4ca964c4d9e1478ab8132865, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   NPC: {fileID: 1917103574672648, guid: 62b6ffa29b6fef246b925fbd80db5dd6, type: 2}
+=======
+  m_Script: {fileID: 11500000, guid: 744a037219bdc3447adacf8940a1c9f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPC: {fileID: 0}
+>>>>>>> Programming
   agent: {fileID: 0}
   Opponent: {fileID: 0}
   speed: 2
@@ -254,7 +289,11 @@ AnimatorState:
   m_Transitions:
   - {fileID: 1101458990410820354}
   m_StateMachineBehaviours:
+<<<<<<< HEAD
   - {fileID: 114186063450589534}
+=======
+  - {fileID: 114225138172461886}
+>>>>>>> Programming
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -282,7 +321,11 @@ AnimatorState:
   - {fileID: 1101897741242939152}
   - {fileID: 1101604483845283336}
   m_StateMachineBehaviours:
+<<<<<<< HEAD
   - {fileID: 114836929261222506}
+=======
+  - {fileID: 114665377430389094}
+>>>>>>> Programming
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -309,7 +352,11 @@ AnimatorState:
   m_Transitions:
   - {fileID: 1101989970528707274}
   m_StateMachineBehaviours:
+<<<<<<< HEAD
   - {fileID: 114067588655290228}
+=======
+  - {fileID: 114808741744464486}
+>>>>>>> Programming
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1

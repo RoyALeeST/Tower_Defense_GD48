@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 65068731131300954}
   - component: {fileID: 23603245473796186}
   - component: {fileID: 114125559322989556}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,8 +36,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1620528899623612}
+<<<<<<< HEAD
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -5}
+=======
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -52, y: 0, z: 40}
+>>>>>>> Programming
   m_LocalScale: {x: 4, y: 1, z: 4}
   m_Children: []
   m_Father: {fileID: 0}
@@ -111,4 +116,12 @@ MonoBehaviour:
   notEnoughMoneyColor: {r: 0.875, g: 0.15441176, b: 0.15441176, a: 0}
   turret: {fileID: 0}
   isUpgraded: 0
+<<<<<<< HEAD
+=======
+  turretBlueprint:
+    prefab: {fileID: 0}
+    costOfTurret: 0
+    upgradeCost: 0
+    upgradedPrefab: {fileID: 0}
+>>>>>>> Programming
   positionOffset: {x: 0, y: 0.5, z: 0}
