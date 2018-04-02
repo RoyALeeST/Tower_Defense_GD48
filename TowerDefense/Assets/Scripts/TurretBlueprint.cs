@@ -11,4 +11,7 @@ public class TurretBlueprint {
 	//TODO => ARRAY OF OBJECTS OR LIST THAT CONTAIN EACH VERSION OF THE 
 	//UPGRADED VERSION OF THE TURRET
 
+	public int GetSellAmount(){
+		return costOfTurret /2;
+	}
 }
