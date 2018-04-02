@@ -6,5 +6,9 @@ using UnityEngine;
 public class TurretBlueprint {
 	public GameObject prefab;
 	public int costOfTurret;
+	public int upgradeCost;
+	public GameObject upgradedPrefab;
+	//TODO => ARRAY OF OBJECTS OR LIST THAT CONTAIN EACH VERSION OF THE 
+	//UPGRADED VERSION OF THE TURRET
 
 }

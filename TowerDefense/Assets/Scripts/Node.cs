@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Node : MonoBehaviour {
@@ -12,7 +10,12 @@ public class Node : MonoBehaviour {
 	private Renderer rend;
 	private Color startColor;
 	[Header("Optional")]
+	[HideInInspector]
 	public GameObject turret;
+	[HideInInspector]
+	public bool isUpgraded = false;
+	[HideInInspector]
+	private TurretBlueprint turretBlueprint;
 	public Vector3 positionOffset;
 	
 	// Use this for initialization
@@ -22,6 +25,7 @@ public class Node : MonoBehaviour {
 		buildManager = BuildManager._instance;
 	}
 	
+	//On Hover 
 	void OnMouseEnter(){
 		//iF IM HOVERING ON TOP OF UI ELEMENT return;
 		if(EventSystem.current.IsPointerOverGameObject())
@@ -42,30 +46,75 @@ public class Node : MonoBehaviour {
 		}
 	}
 
+	//On click
 	void OnMouseDown(){
+
 		if(EventSystem.current.IsPointerOverGameObject()){
 			return;
 		}
+		//If there's a turret on our node then select the cliked node
+		if(turret != null){
+			buildManager.SelectNode(this);
+			return;
+		}
+
 		//If no turret is selected return
+		//We only want to do this if there is no turret on the node
 		if(!buildManager.CanBuild){
 			return;
 		}
-		//If there's a turret on our node then print message
-		if(turret != null){
-			Debug.Log("Can't build here - TODO: Display on Screen");
+		//Create turret
+		BuildTurret(buildManager.GetTurretToBuild());
+	}
+
+	//On hover off
+	void OnMouseExit(){
+		rend.material.color = startColor; 
+	}
+
+	//Buit turret on the selected Node position
+	void BuildTurret(TurretBlueprint blueprint)
+	{
+		//If not enough money
+		if(PlayerStats.money < blueprint.costOfTurret)
+		{
+			Debug.Log("Insuficient Money!!");
 			return;
 		}
-		buildManager.BuildTurretOn(this);
+
+		//Build Turret
+		GameObject _turret = Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
+		turret = _turret;
+		PlayerStats.money -= blueprint.costOfTurret;
+		GameObject referenceToParticle = Instantiate(buildManager.purchaseTowerParticle	 , transform.position, Quaternion.identity);
+		Destroy(referenceToParticle,1f);
+		//Debug.Log("Turret build! Money left: " + PlayerStats.money);
 	}
 
-		void OnMouseExit(){
-			rend.material.color = startColor; 
+	//returns the position at the top of the node 0.5 is the offset
+	public Vector3 GetBuildPosition(){
+		return transform.position + positionOffset;
+	}
+
+	public void UpgradeTurret(){
+		//If not enough money
+		if(PlayerStats.money < turretBlueprint.upgradeCost)
+		{
+			Debug.Log("Insuficient Money to upgrade!!");
+			return;
 		}
 
-		public Vector3 GetBuildPosition(){
-			return transform.position + positionOffset;
-		}
-	// Update is called once per frame
-	void Update () {
+		Destroy(turret); //Destroy the old turret
+		//Build Upgraded Turret
+		GameObject _turret = Instantiate(turretBlueprint.upgradedPrefab, GetBuildPosition(), Quaternion.identity);
+		turret = _turret;
+		PlayerStats.money -= turretBlueprint.upgradeCost;
+		
+		GameObject referenceToParticle = Instantiate(buildManager.purchaseTowerParticle	 , transform.position, Quaternion.identity);
+		Destroy(referenceToParticle,1f);
+
+		isUpgraded = true;
+		//Debug.Log("Turret build! Money left: " + PlayerStats.money);
 	}
+
 }

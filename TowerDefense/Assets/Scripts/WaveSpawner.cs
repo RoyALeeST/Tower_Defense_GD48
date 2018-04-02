@@ -29,6 +29,7 @@ private int waveIndex = 0;
 
 	//Coroutine that executes this code outside of our main function time frame
 	IEnumerator SpawnWave(){
+		PlayerStats.rounds++;
 		waveIndex++;
 		for (int i = 0; i < waveIndex; i++)
 		{

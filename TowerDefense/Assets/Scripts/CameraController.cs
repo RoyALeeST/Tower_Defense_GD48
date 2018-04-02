@@ -20,6 +20,10 @@ public class CameraController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(GameManager.gameIsOver){
+			this.enabled = false;
+			return;
+		}
 		if(Input.GetKeyDown(KeyCode.Escape)) //Lock the movement of the camera with the esc key
 		doMovement = !doMovement;
 
@@ -50,22 +54,22 @@ public class CameraController : MonoBehaviour {
 
 		//My camera is positioned with a different rotation meaning that all the axis are missplaced
 			//Forward Movement
-			if(Input.GetKey("w") || Input.mousePosition.y >= Screen.height - panBorderThickness){
+			if(Input.GetKey("w")){
 				transform.Translate(Vector3.right * panSpeed * Time.deltaTime, Space.World);
 			}
 
 			//Left movement
-			if(Input.GetKey("a") || Input.mousePosition.x <= panBorderThickness){
+			if(Input.GetKey("a")){
 				transform.Translate(Vector3.forward * panSpeed * Time.deltaTime, Space.World);
 			}
 
 			//Downward movement
-			if(Input.GetKey("s") || Input.mousePosition.y <= panBorderThickness){
+			if(Input.GetKey("s")){
 				transform.Translate(Vector3.left * panSpeed * Time.deltaTime, Space.World);
 			}
 
 			//Right movement
-			if(Input.GetKey("d") || Input.mousePosition.x >= Screen.width - panBorderThickness){
+			if(Input.GetKey("d")){
 				transform.Translate(Vector3.back * panSpeed * Time.deltaTime, Space.World);
 			}
 

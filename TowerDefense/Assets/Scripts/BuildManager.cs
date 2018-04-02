@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BuildManager : MonoBehaviour {
 
@@ -8,41 +6,48 @@ public class BuildManager : MonoBehaviour {
 	//Singleton
 	public static BuildManager _instance;
 	private TurretBlueprint turretToBuild;
-	public GameObject standardTurretPrefab;
-	public GameObject rocketTurretPrefab;
 	public bool CanBuild{ get { return turretToBuild != null;}} // true if turret is selected
 	public bool hasMoney{ get { return PlayerStats.money >= turretToBuild.costOfTurret;}} // true if sufficient money
-	[SerializeField]
-    private GameObject purchaseTowerParticle;
+
+    public GameObject purchaseTowerParticle;
+	public Node selectedNode;
+
+	public NodeUI nodeUI;
 	void Awake(){
 		//SINGLETON INSTANCE
 		if(_instance == null){
 			_instance = this;
 			return;
 		}
-		Debug.Log("More than one build manager in scene");
+		//sDebug.Log("More than one build manager in scene");
 	}
 
 	public void SelectTurretToBuild(TurretBlueprint turret){
 		turretToBuild = turret;
+		DeselectNode();
 	}
 
-	public void BuildTurretOn(Node node){
-		if(PlayerStats.money < turretToBuild.costOfTurret){
-			Debug.Log("Insuficient Money!!");
+	public void SelectNode(Node node){
+		if(selectedNode == node){
+			Debug.Log("Same node selected");
+			DeselectNode();
 			return;
 		}
-		GameObject turret = Instantiate(turretToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
-		node.turret = turret;
-		PlayerStats.money -= turretToBuild.costOfTurret;
-		GameObject referenceToParticle = Instantiate(purchaseTowerParticle, node.transform.position, Quaternion.identity);
-        Destroy(referenceToParticle,1f);
-		Debug.Log("Turret build! Money left: " + PlayerStats.money);
+
+		Debug.Log("Different node selected");
+		selectedNode = node;
+		turretToBuild = null;
+		nodeUI.SetTarget(node);
+		//  Debug.Log(node);
+		// Debug.Log(selectedNode);
 	}
 
-	
-	// Update is called once per frame
-	void Update () {
-		
+	public TurretBlueprint GetTurretToBuild(){
+		return turretToBuild;
+	}
+
+	public void DeselectNode(){
+		selectedNode = null;
+		nodeUI.Hide();
 	}
 }
