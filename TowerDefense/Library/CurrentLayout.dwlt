@@ -39,6 +39,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 0
     y: 30
     width: 1920
@@ -48,6 +49,8 @@ MonoBehaviour:
   vertical: 0
   controlID: 77
 =======
+=======
+>>>>>>> parent of 1e4367d... Started Main Menu
     x: 439
     y: 0
     width: 234
@@ -97,6 +100,7 @@ MonoBehaviour:
   vertical: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 116
 =======
 <<<<<<< HEAD
@@ -106,6 +110,9 @@ MonoBehaviour:
 >>>>>>> 700a74e012a38bfcfbe693687269e6d8c4d7a0d0
 >>>>>>> 7cd0c97ce759c8bf917634e2ded3a9bcb448a6c4
 >>>>>>> 1623292b62a87bf653a50f384998b482ff3e6710
+=======
+  controlID: 60
+>>>>>>> parent of 1e4367d... Started Main Menu
 =======
   controlID: 60
 >>>>>>> parent of 1e4367d... Started Main Menu
@@ -126,6 +133,7 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 379
     height: 646
   m_MinSize: {x: 200, y: 200}
@@ -136,6 +144,8 @@ MonoBehaviour:
   m_Selected: 0
   m_LastSelected: 0
 =======
+=======
+>>>>>>> parent of 1e4367d... Started Main Menu
     width: 950
     height: 1102
   m_MinSize: {x: 950, y: 300}
@@ -195,12 +205,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 0
     width: 1920
     height: 1118
   m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 =======
+=======
+>>>>>>> parent of 1e4367d... Started Main Menu
     y: 1082
     width: 950
     height: 20
@@ -222,6 +235,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     y: 0
     width: 1920
@@ -245,6 +259,15 @@ MonoBehaviour:
 >>>>>>> 700a74e012a38bfcfbe693687269e6d8c4d7a0d0
 >>>>>>> 7cd0c97ce759c8bf917634e2ded3a9bcb448a6c4
 >>>>>>> 1623292b62a87bf653a50f384998b482ff3e6710
+=======
+    y: 30
+    width: 950
+    height: 1052
+  m_MinSize: {x: 683, y: 492}
+  m_MaxSize: {x: 18008, y: 14042}
+  vertical: 0
+  controlID: 93
+>>>>>>> parent of 1e4367d... Started Main Menu
 =======
     y: 30
     width: 950
@@ -283,8 +306,12 @@ MonoBehaviour:
   m_MaxSize: {x: 14006, y: 14042}
   vertical: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 51
 >>>>>>> 1623292b62a87bf653a50f384998b482ff3e6710
+=======
+  controlID: 13
+>>>>>>> parent of 1e4367d... Started Main Menu
 =======
   controlID: 13
 >>>>>>> parent of 1e4367d... Started Main Menu
@@ -308,6 +335,7 @@ MonoBehaviour:
     y: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1531
     height: 1068
   m_MinSize: {x: 404, y: 492}
@@ -322,6 +350,14 @@ MonoBehaviour:
   vertical: 0
   controlID: 52
 >>>>>>> 1623292b62a87bf653a50f384998b482ff3e6710
+=======
+    width: 673
+    height: 745
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
+  vertical: 0
+  controlID: 14
+>>>>>>> parent of 1e4367d... Started Main Menu
 =======
     width: 673
     height: 745
@@ -349,6 +385,7 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1531
     height: 646
   m_MinSize: {x: 404, y: 221}
@@ -356,6 +393,8 @@ MonoBehaviour:
   vertical: 0
   controlID: 11
 =======
+=======
+>>>>>>> parent of 1e4367d... Started Main Menu
     width: 469
     height: 745
   m_MinSize: {x: 202, y: 221}
@@ -385,6 +424,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 379
     y: 0
 <<<<<<< HEAD
@@ -409,13 +449,20 @@ MonoBehaviour:
     x: 469
     y: 0
 >>>>>>> parent of 1e4367d... Started Main Menu
+=======
+    x: 469
+    y: 0
+>>>>>>> parent of 1e4367d... Started Main Menu
     width: 204
     height: 745
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 700a74e012a38bfcfbe693687269e6d8c4d7a0d0
 >>>>>>> 7cd0c97ce759c8bf917634e2ded3a9bcb448a6c4
+=======
+>>>>>>> parent of 1e4367d... Started Main Menu
 =======
 >>>>>>> parent of 1e4367d... Started Main Menu
   m_ActualView: {fileID: 21}
@@ -467,6 +514,7 @@ MonoBehaviour:
     y: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 560
     height: 1068
 =======
@@ -478,6 +526,10 @@ MonoBehaviour:
     height: 1052
 >>>>>>> 700a74e012a38bfcfbe693687269e6d8c4d7a0d0
 >>>>>>> 7cd0c97ce759c8bf917634e2ded3a9bcb448a6c4
+=======
+    width: 277
+    height: 1052
+>>>>>>> parent of 1e4367d... Started Main Menu
 =======
     width: 277
     height: 1052
@@ -825,6 +877,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedIDs: 
     m_LastClickedID: 0
     m_ExpandedIDs: 72afffffd0e4ffff9efbffff00000000e0300000
@@ -839,6 +892,11 @@ MonoBehaviour:
     m_ExpandedIDs: c0f7ffff00000000
 >>>>>>> 700a74e012a38bfcfbe693687269e6d8c4d7a0d0
 >>>>>>> 7cd0c97ce759c8bf917634e2ded3a9bcb448a6c4
+=======
+    m_SelectedIDs: 0e2b0000
+    m_LastClickedID: 0
+    m_ExpandedIDs: c0f7ffff00000000
+>>>>>>> parent of 1e4367d... Started Main Menu
 =======
     m_SelectedIDs: 0e2b0000
     m_LastClickedID: 0
@@ -889,16 +947,22 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 889
     y: 847
     width: 469
     height: 291
 >>>>>>> 1623292b62a87bf653a50f384998b482ff3e6710
 =======
+=======
+>>>>>>> parent of 1e4367d... Started Main Menu
     x: 1403
     y: 844
     width: 230
     height: 286
+<<<<<<< HEAD
+>>>>>>> parent of 1e4367d... Started Main Menu
+=======
 >>>>>>> parent of 1e4367d... Started Main Menu
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
@@ -915,6 +979,7 @@ MonoBehaviour:
     m_Folders:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Prefabs/Actors
   m_ViewMode: 1
 =======
@@ -927,6 +992,9 @@ MonoBehaviour:
     - Assets/Scenes/MainScene
 >>>>>>> 700a74e012a38bfcfbe693687269e6d8c4d7a0d0
 >>>>>>> 7cd0c97ce759c8bf917634e2ded3a9bcb448a6c4
+=======
+    - Assets/Scenes/MainScene
+>>>>>>> parent of 1e4367d... Started Main Menu
 =======
     - Assets/Scenes/MainScene
 >>>>>>> parent of 1e4367d... Started Main Menu
@@ -950,6 +1018,7 @@ MonoBehaviour:
     m_LastClickedID: 10634
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000f22700002a2800004628000096280000dc2800000029000054290000
 =======
 <<<<<<< HEAD
@@ -959,6 +1028,9 @@ MonoBehaviour:
 >>>>>>> 700a74e012a38bfcfbe693687269e6d8c4d7a0d0
 >>>>>>> 7cd0c97ce759c8bf917634e2ded3a9bcb448a6c4
 >>>>>>> 1623292b62a87bf653a50f384998b482ff3e6710
+=======
+    m_ExpandedIDs: 00000000da290000102a0000442a0000802a0000982a0000dc2a0000
+>>>>>>> parent of 1e4367d... Started Main Menu
 =======
     m_ExpandedIDs: 00000000da290000102a0000442a0000802a0000982a0000dc2a0000
 >>>>>>> parent of 1e4367d... Started Main Menu
@@ -991,6 +1063,7 @@ MonoBehaviour:
     m_LastClickedID: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000f22700002a2800004628000096280000dc280000002900001a29000054290000
 =======
 <<<<<<< HEAD
@@ -1003,6 +1076,9 @@ MonoBehaviour:
 >>>>>>> 700a74e012a38bfcfbe693687269e6d8c4d7a0d0
 >>>>>>> 7cd0c97ce759c8bf917634e2ded3a9bcb448a6c4
 >>>>>>> 1623292b62a87bf653a50f384998b482ff3e6710
+=======
+    m_ExpandedIDs: 00000000da290000fa290000102a0000442a0000802a0000982a0000dc2a0000
+>>>>>>> parent of 1e4367d... Started Main Menu
 =======
     m_ExpandedIDs: 00000000da290000fa290000102a0000442a0000802a0000982a0000dc2a0000
 >>>>>>> parent of 1e4367d... Started Main Menu
@@ -1083,15 +1159,21 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1533
     y: 91
     width: 387
     height: 1047
 =======
+=======
+>>>>>>> parent of 1e4367d... Started Main Menu
     x: 962
     y: 844
     width: 437
     height: 286
+<<<<<<< HEAD
+>>>>>>> parent of 1e4367d... Started Main Menu
+=======
 >>>>>>> parent of 1e4367d... Started Main Menu
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ScrollPosition: {x: 0, y: 0}
@@ -1123,6 +1205,7 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
     x: 0
     y: 91
@@ -1337,9 +1420,14 @@ MonoBehaviour:
     width: 1366
     height: 308
 =======
+=======
+>>>>>>> parent of 1e4367d... Started Main Menu
     x: 1637
     y: 99
     width: 275
     height: 1031
+<<<<<<< HEAD
+>>>>>>> parent of 1e4367d... Started Main Menu
+=======
 >>>>>>> parent of 1e4367d... Started Main Menu
   m_PersistentViewDataDictionary: {fileID: 0}
