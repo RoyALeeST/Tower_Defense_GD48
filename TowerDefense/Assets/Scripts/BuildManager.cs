@@ -10,7 +10,6 @@ public class BuildManager : MonoBehaviour {
 	public bool hasMoney{ get { return PlayerStats.money >= turretToBuild.costOfTurret;}} // true if sufficient money
 
     public GameObject purchaseTowerParticle;
-    public GameObject sellTowerParticle;
 	public Node selectedNode;
 
 	public NodeUI nodeUI;

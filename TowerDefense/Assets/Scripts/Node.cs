@@ -9,13 +9,13 @@ public class Node : MonoBehaviour {
 
 	private Renderer rend;
 	private Color startColor;
-
+	[Header("Optional")]
 	[HideInInspector]
 	public GameObject turret;
 	[HideInInspector]
 	public bool isUpgraded = false;
 	[HideInInspector]
-	public TurretBlueprint turretBlueprint;
+	private TurretBlueprint turretBlueprint;
 	public Vector3 positionOffset;
 	
 	// Use this for initialization
@@ -74,7 +74,7 @@ public class Node : MonoBehaviour {
 
 	//Buit turret on the selected Node position
 	void BuildTurret(TurretBlueprint blueprint)
-	{ 
+	{
 		//If not enough money
 		if(PlayerStats.money < blueprint.costOfTurret)
 		{
@@ -86,8 +86,6 @@ public class Node : MonoBehaviour {
 		GameObject _turret = Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
 		turret = _turret;
 		PlayerStats.money -= blueprint.costOfTurret;
-
-		turretBlueprint = blueprint;
 		GameObject referenceToParticle = Instantiate(buildManager.purchaseTowerParticle	 , transform.position, Quaternion.identity);
 		Destroy(referenceToParticle,1f);
 		//Debug.Log("Turret build! Money left: " + PlayerStats.money);
@@ -96,16 +94,6 @@ public class Node : MonoBehaviour {
 	//returns the position at the top of the node 0.5 is the offset
 	public Vector3 GetBuildPosition(){
 		return transform.position + positionOffset;
-	}
-
-	public void sellTurret(){
-		PlayerStats.money += turretBlueprint.GetSellAmount();
-		//-=----------- IMPORTANT -------------//
-		//TODO => Spawn a selling  effect-> just uncomment this and drag and dropthe particle on the inspector
-		// GameObject referenceToParticle = Instantiate(buildManager.sellTowerParticle	 , transform.position, Quaternion.identity);
-		// Destroy(referenceToParticle,1f);
-		Destroy(turret);
-		turretBlueprint = null;
 	}
 
 	public void UpgradeTurret(){
@@ -126,7 +114,7 @@ public class Node : MonoBehaviour {
 		Destroy(referenceToParticle,1f);
 
 		isUpgraded = true;
-		Debug.Log("Turret Upgraded");
+		//Debug.Log("Turret build! Money left: " + PlayerStats.money);
 	}
 
 }
