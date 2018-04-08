@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 4}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -61,9 +61,15 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 415
     y: 0
     width: 898
+=======
+    x: 640
+    y: 0
+    width: 673
+>>>>>>> Yifan
     height: 646
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
@@ -93,7 +99,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 1118
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &5
 MonoBehaviour:
@@ -159,7 +165,11 @@ MonoBehaviour:
   m_MinSize: {x: 887, y: 492}
   m_MaxSize: {x: 16012, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 78
+=======
+  controlID: 152
+>>>>>>> Yifan
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -225,7 +235,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 415
+=======
+    width: 640
+>>>>>>> Yifan
     height: 646
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
@@ -345,9 +359,15 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 417
     y: 91
     width: 894
+=======
+    x: 642
+    y: 91
+    width: 669
+>>>>>>> Yifan
     height: 625
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
@@ -358,8 +378,13 @@ MonoBehaviour:
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
+<<<<<<< HEAD
     m_HBaseRangeMin: -447
     m_HBaseRangeMax: 447
+=======
+    m_HBaseRangeMin: -334.5
+    m_HBaseRangeMax: 334.5
+>>>>>>> Yifan
     m_VBaseRangeMin: -304
     m_VBaseRangeMax: 304
     m_HAllowExceedBaseRangeMin: 1
@@ -378,25 +403,42 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
+<<<<<<< HEAD
       width: 894
       height: 608
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 447, y: 304}
+=======
+      width: 669
+      height: 608
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 334.5, y: 304}
+>>>>>>> Yifan
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -447
       y: -304
       width: 894
+=======
+      x: -334.5
+      y: -304
+      width: 669
+>>>>>>> Yifan
       height: 608
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
+<<<<<<< HEAD
   m_LastWindowPixelSize: {x: 894, y: 625}
+=======
+  m_LastWindowPixelSize: {x: 669, y: 625}
+>>>>>>> Yifan
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -429,8 +471,13 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 
     m_LastClickedID: 0
+=======
+    m_SelectedIDs: 44f8ffff
+    m_LastClickedID: -1980
+>>>>>>> Yifan
     m_ExpandedIDs: 9efbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -477,7 +524,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 91
+<<<<<<< HEAD
     width: 413
+=======
+    width: 638
+>>>>>>> Yifan
     height: 625
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
@@ -486,9 +537,15 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: -51.525036, y: -8.068876, z: 137.64955}
     speed: 2
     m_Value: {x: -51.525036, y: -8.068876, z: 137.64955}
+=======
+    m_Target: {x: -55.15778, y: 0.48085845, z: 139.90262}
+    speed: 2
+    m_Value: {x: -55.15778, y: 0.48085845, z: 139.90262}
+>>>>>>> Yifan
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -512,9 +569,15 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
+<<<<<<< HEAD
     m_Target: {x: 0.09786836, y: 0.697615, z: -0.09710753, w: 0.70308274}
     speed: 2
     m_Value: {x: 0.097868346, y: 0.69761497, z: -0.097107515, w: 0.7030827}
+=======
+    m_Target: {x: -0.16982983, y: -0.8049663, z: 0.2746512, w: -0.4977488}
+    speed: 2
+    m_Value: {x: 0.16982983, y: 0.8049662, z: -0.2746512, w: 0.49774876}
+>>>>>>> Yifan
   m_Size:
     m_Target: 2.2645073
     speed: 2
@@ -639,19 +702,33 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
+<<<<<<< HEAD
     - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
   - Assets/Prefabs
+=======
+    - Assets/Prefabs/Prefabs
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Prefabs/Prefabs
+>>>>>>> Yifan
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\gd48yifan\Documents\GitHub\Tower_Defense_GD48\PROTOTYPEFINAL
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 32}
+<<<<<<< HEAD
     m_SelectedIDs: 46290000
     m_LastClickedID: 10566
     m_ExpandedIDs: 00000000102800003c28000074280000a42800001a290000462900008c2900008e290000b6290000dc290000362a0000cc2a0000c234000000ca9a3bffffff7f
+=======
+    m_SelectedIDs: cc2a0000
+    m_LastClickedID: 10956
+    m_ExpandedIDs: 00000000102800003c28000074280000a42800001a290000462900008c2900008e290000b6290000dc290000362a0000cc2a00009434000000ca9a3bffffff7f
+>>>>>>> Yifan
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -679,7 +756,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000102800003c28000074280000a42800001a290000462900008c2900008e290000b6290000dc290000362a0000cc2a0000c2340000
+=======
+    m_ExpandedIDs: 00000000102800003c28000074280000a42800001a2900008c2900008e290000b6290000dc290000362a0000cc2a000094340000
+>>>>>>> Yifan
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
