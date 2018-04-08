@@ -108,6 +108,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 50
-  _explosionRadius: 10
+  _explosionRadius: 20
   _explosion_effect: {fileID: 1925914038005464, guid: 8c2e697c1a330864b88682ada107112a,
     type: 2}
