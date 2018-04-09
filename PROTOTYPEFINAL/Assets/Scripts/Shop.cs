@@ -4,6 +4,7 @@ public class Shop : MonoBehaviour {
 	public TurretBlueprint standardTurret;
 	public TurretBlueprint missileLauncher;
 	public TurretBlueprint laserBeamerTurret;
+	public TurretBlueprint buffTurret;
 
 	public TurretBlueprint treetest03;
 
@@ -23,8 +24,13 @@ public class Shop : MonoBehaviour {
 		//Debug.Log("Rocket Turret Selected");
 	}
 
-		public void SelectLaserBeamer(){
+	public void SelectLaserBeamer(){
 		buildManager.SelectTurretToBuild(laserBeamerTurret);
+		//Debug.Log("Laser Turret Selected");
+	}
+
+	public void SelectBuffTower(){
+		buildManager.SelectTurretToBuild(buffTurret);
 		//Debug.Log("Laser Turret Selected");
 	}
 	public void SelectTree(){

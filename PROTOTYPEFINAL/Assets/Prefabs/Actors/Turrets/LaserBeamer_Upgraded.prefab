@@ -120,9 +120,10 @@ GameObject:
   - component: {fileID: 4311020036286944}
   - component: {fileID: 114701249170372116}
   - component: {fileID: 120982970022406516}
+  - component: {fileID: 65179334162616176}
   m_Layer: 0
   m_Name: LaserBeamer_Upgraded
-  m_TagString: Untagged
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -338,6 +339,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1279110092972128}
   m_Mesh: {fileID: 4300000, guid: fe93368f480b5b94888507d3e0747536, type: 3}
+--- !u!65 &65179334162616176
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1370284716396216}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6, y: 0.6000004, z: 1.5856943}
+  m_Center: {x: 0, y: 3.11, z: 0.49284697}
 --- !u!108 &108011318710285068
 Light:
   m_ObjectHideFlags: 1
@@ -395,6 +408,9 @@ MonoBehaviour:
   impactEffect: {fileID: 198740731007254698}
   damageOverTime: 50
   slowPercentage: 0.75
+  buff_tower: 0
+  buff_range: 0
+  _buff_multiplier: 0
   enemyTag: Enemy
   pathToRotate: {fileID: 4623520021572058}
   speed: 10
@@ -405,7 +421,7 @@ LineRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1370284716396216}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -453,8 +469,8 @@ LineRenderer:
       m_RotationOrder: 0
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.6091279, g: 0, b: 0.61764705, a: 1}
-      key1: {r: 0.2175456, g: 0.4852941, b: 0, a: 1}
+      key0: {r: 0.3051277, g: 0.040873703, b: 0.30882353, a: 1}
+      key1: {r: 0.32352942, g: 0.0071366853, b: 0.0071366853, a: 1}
       key2: {r: 1, g: 1, b: 1, a: 1}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -469,7 +485,7 @@ LineRenderer:
       ctime5: 0
       ctime6: 0
       ctime7: 0
-      atime0: 0
+      atime0: 22166
       atime1: 65535
       atime2: 65535
       atime3: 0

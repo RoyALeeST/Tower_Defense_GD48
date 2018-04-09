@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 195438292433435754}
   - component: {fileID: 114699200195496712}
   - component: {fileID: 114646406159452574}
+  - component: {fileID: 65961255563158958}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Enemy
@@ -220,7 +221,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1917103574672648}
   m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.1033, y: -0.47383147, z: 9.60277}
+  m_LocalPosition: {x: -42.876175, y: -14.62, z: 74.137535}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4576656877099386}
@@ -438,6 +439,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1739332533091264}
   m_Mesh: {fileID: 4300002, guid: 002e2a607f5b64c48be0b3b0d8b8bfdd, type: 3}
+--- !u!65 &65961255563158958
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1917103574672648}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.53, y: 1.22, z: 1.73}
+  m_Center: {x: 0, y: 0.65, z: 0}
 --- !u!65 &65985174578168618
 BoxCollider:
   m_ObjectHideFlags: 1

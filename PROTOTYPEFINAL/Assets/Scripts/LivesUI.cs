@@ -12,6 +12,10 @@ public class LivesUI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		livesText.text =  PlayerStats.lives.ToString() + " Lives";
+		if(PlayerStats.lives < 2){
+			livesText.text =  PlayerStats.lives.ToString() + " Live";
+		}else{
+			livesText.text =  PlayerStats.lives.ToString() + " Lives";
+		}
 	}
 }

@@ -6,7 +6,6 @@ public class CameraController : MonoBehaviour {
 
 	public float panSpeed = 30f;
 	public float panBorderThickness = 10f;//Space between the border of the screen and the limit of the area that will trigger the movement of the camera
-	private bool doMovement = true;
 	private float scroll; //value returned by the scroll of the mouse wheel
 	public float scrollSpeed = 5f;
 	[SerializeField]
@@ -24,12 +23,7 @@ public class CameraController : MonoBehaviour {
 			this.enabled = false;
 			return;
 		}
-		if(Input.GetKeyDown(KeyCode.Escape)) //Lock the movement of the camera with the esc key
-		doMovement = !doMovement;
-
-		if(!doMovement)
-			return;
-
+	
 		#region Code when camera is positioned correctly LMAO
 			// //Forward Movement
 			// if(Input.GetKey("w") || Input.mousePosition.y >= Screen.height - panBorderThickness){

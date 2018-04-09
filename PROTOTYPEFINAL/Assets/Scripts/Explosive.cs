@@ -15,10 +15,10 @@ public class Explosive : MonoBehaviour {
         foreach (var collider in objectsInRadius)
         {   
             //If the thing that I collided with is an enemy
-            if(collider.tag == "Player")
+            if(collider.tag == "Enemy")
             {
                 //Damage that object
-                //Damage(collider.transform);
+                Damage(collider.transform);
 				GameObject deathParticle = Instantiate(_explosion_effect,transform.position, transform.rotation);
 				Destroy(deathParticle,1f);
 				Destroy(gameObject);
@@ -42,6 +42,7 @@ public class Explosive : MonoBehaviour {
         Enemy e = enemyToDamage.GetComponent<Enemy>();
         if(e != null){
             e.TakeDamage(_damage);
+			Debug.Log(e.health);
         }
         
     }
