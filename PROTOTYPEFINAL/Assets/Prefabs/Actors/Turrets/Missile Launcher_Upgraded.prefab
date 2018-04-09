@@ -258,7 +258,7 @@ MonoBehaviour:
   target: {fileID: 0}
   range: 45
   fireRate: 0.5
-  bulletPrefab: {fileID: 1951382955647952, guid: 382ee3472202c16489f3be166841ad65,
+  bulletPrefab: {fileID: 1951382955647952, guid: 93012621009ce2e4e9dc47fe7005427e,
     type: 2}
   useLaser: 0
   lineRenderer: {fileID: 0}

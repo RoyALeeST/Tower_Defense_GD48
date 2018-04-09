@@ -21,6 +21,6 @@ public class GameOver : MonoBehaviour {
 
 	//Return to main menu
 	public void goBackTo_MainMenu(){
-		SceneManager.LoadScene("MainMenu");
+		Debug.Log("Go to menu");
 	}
 }
