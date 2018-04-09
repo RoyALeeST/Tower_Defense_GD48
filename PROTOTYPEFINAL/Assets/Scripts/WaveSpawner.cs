@@ -41,7 +41,7 @@ private int waveIndex = 0;
 	}
 
 	void SpawnEnemy(){
-		Instantiate(enemyPrefab,spawnPoint.position,spawnPoint.rotation);
-        
+		GameObject enemy = Instantiate(enemyPrefab,spawnPoint.position,spawnPoint.rotation);
+        enemy.gameObject.tag = "Enemy";
     }
 }

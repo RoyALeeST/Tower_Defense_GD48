@@ -67,9 +67,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4420815955687030}
   - component: {fileID: 114031127395182780}
+  - component: {fileID: 65151794664478814}
   m_Layer: 0
   m_Name: StandardTurret_Upgraded
-  m_TagString: Untagged
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,7 +125,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1706046743226248}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -42, y: 0.5, z: 35}
+  m_LocalPosition: {x: -44.290054, y: -12.55, z: 75.73265}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4274767798211312}
@@ -245,6 +246,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1228828722284360}
   m_Mesh: {fileID: 4300002, guid: 9dc0c5c295fc0784dae733ba503a5557, type: 3}
+--- !u!65 &65151794664478814
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1706046743226248}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114031127395182780
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -267,6 +280,9 @@ MonoBehaviour:
   impactEffect: {fileID: 0}
   damageOverTime: 30
   slowPercentage: 0.5
+  buff_tower: 0
+  buff_range: 0
+  _buff_multiplier: 0
   enemyTag: Enemy
   pathToRotate: {fileID: 4560090326078610}
   speed: 10

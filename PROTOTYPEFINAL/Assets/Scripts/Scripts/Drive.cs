@@ -10,10 +10,12 @@ public class Drive : MonoBehaviour {
 
     [Header("Skills")]
     [SerializeField]
-    private GameObject wall;
+    private GameObject _wall;
     private float wallDuration = 3;
+    [SerializeField]
+    private GameObject _mine;
 
-    void FixedUpdate() {
+    void Update() {
 
         float translation = Input.GetAxis("Vertical") * speed;
         float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
@@ -23,10 +25,21 @@ public class Drive : MonoBehaviour {
         transform.Rotate(0, rotation, 0);
 
         if(Input.GetKeyDown(KeyCode.Space)){
-            Vector3 front_offset = new Vector3(0,0,8);
-            GameObject _wall = Instantiate(wall, transform.position + (transform.forward * 3), transform.rotation);
-            Destroy(_wall, wallDuration);
+            SummonWall();
+        }
+
+        if(Input.GetKeyDown(KeyCode.C)){
+            PlaceMine();
         }
 	}
+
+    void SummonWall(){
+        GameObject wall = Instantiate(_wall, transform.position + (transform.forward * 3), transform.rotation);
+        Destroy(_wall, wallDuration);
+    }
+
+    void PlaceMine(){
+        GameObject mine = Instantiate(_mine, transform.position, transform.rotation);
+    }
 
 }

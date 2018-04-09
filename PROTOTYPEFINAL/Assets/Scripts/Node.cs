@@ -9,7 +9,22 @@ public class Node : MonoBehaviour {
 
 	private Renderer rend;
 	private Color startColor;
-
+	[SerializeField]
+	private bool _buffNode;
+	[SerializeField]
+	private bool _buff_damage;
+	[SerializeField]
+	private bool _buff_fire_rate;
+	[SerializeField]
+	private bool _buff_range;
+	[SerializeField]
+	private bool _buff_explosion_radius;
+	[SerializeField]
+	private bool _buff_dmg_over_time;
+	[SerializeField]
+	[Tooltip("Multiplier for turret's stat (less than 1 wil lbe a debuff)")]
+	private float _buff_Multiplier;
+	
 	[HideInInspector]
 	public GameObject turret;
 	[HideInInspector]
@@ -85,12 +100,57 @@ public class Node : MonoBehaviour {
 		//Build Turret
 		GameObject _turret = Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
 		turret = _turret;
+		if(_buffNode){
+			BuffTurret(this.turret);
+		}
 		PlayerStats.money -= blueprint.costOfTurret;
 
 		turretBlueprint = blueprint;
 		GameObject referenceToParticle = Instantiate(buildManager.purchaseTowerParticle	 , transform.position, Quaternion.identity);
 		Destroy(referenceToParticle,1f);
 		//Debug.Log("Turret build! Money left: " + PlayerStats.money);
+	}
+
+	private void BuffTurret(GameObject turret_to_be_buffed){
+		Turret turret_to_buff = turret_to_be_buffed.GetComponent<Turret>();
+		Bullet bullet_to_buff = null;
+		if(turret_to_buff != null){
+			//If the turret doesn't use a laser It's not a buff tower
+			if(!turret_to_buff.useLaser && !turret_to_buff.buff_tower){
+				bullet_to_buff = turret_to_buff.bulletPrefab.GetComponent<Bullet>();
+				//These buffs affect the bullet attached to the turret not the turret itself
+				if(_buff_damage){
+					if(bullet_to_buff != null){
+						bullet_to_buff.damage *= (int)_buff_Multiplier;
+					}
+				}
+				if(_buff_explosion_radius){
+					if(bullet_to_buff != null){
+						bullet_to_buff.explosionRadius *= (int)_buff_Multiplier;
+					}
+				}
+				if(_buff_range){
+					Debug.Log("Im buffing the laser");
+					turret_to_buff.range *= _buff_Multiplier;	
+				}
+								if(_buff_fire_rate){
+					turret_to_buff.fireRate *= _buff_Multiplier;
+				}
+			}
+			else
+			{
+				if(_buff_range){
+					Debug.Log("Im buffing the laser");
+					turret_to_buff.range *= _buff_Multiplier;	
+				}
+				if(_buff_dmg_over_time){
+					turret_to_buff.damageOverTime *= _buff_Multiplier;
+				}
+				if(_buff_fire_rate){
+					turret_to_buff.fireRate *= _buff_Multiplier;
+				}
+			}
+		}
 	}
 
 	//returns the position at the top of the node 0.5 is the offset

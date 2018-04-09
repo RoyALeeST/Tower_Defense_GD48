@@ -13,7 +13,7 @@ public class Turret : MonoBehaviour {
     [Header("Use Bullets(Default)")]
     public float fireRate = 1f; //Fire rate
     private float fireCountdown = 0f; //Time between shoots
-    public GameObject bulletPrefab; //Bullet to shoot
+    public GameObject bulletPrefab = null; //Bullet to shoot
 
 
 
@@ -22,8 +22,16 @@ public class Turret : MonoBehaviour {
     public LineRenderer lineRenderer;   //Line renderer for the lase effect
     public Light impactLight;
     public ParticleSystem impactEffect;
-    public int damageOverTime = 30;
+    public float damageOverTime = 30;
     public float slowPercentage = .5f;
+
+    [Header("Use Laser")]
+    public bool buff_tower = false;   //If true then the turrets doesn't shoot
+    public int buff_range;
+    [SerializeField]
+    private float _buff_multiplier = 1;
+    
+
 
 
     [Header("Unity setup fields")]
@@ -35,7 +43,12 @@ public class Turret : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        if(buff_tower){
+            Buff();
+            return;
+        }
 		InvokeRepeating("UpdateTarget",0f,0.5f);
+
 	}
 	
 	//Search trough all objects tagged as enemies,  picks the closes one
@@ -65,6 +78,10 @@ public class Turret : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+        if(buff_tower){
+            return;
+        }
 		if(target == null)
         {
             if(useLaser){
@@ -77,7 +94,6 @@ public class Turret : MonoBehaviour {
             }
             return;
         }
-			
 
         LockOnTarget();
 
@@ -141,9 +157,109 @@ public class Turret : MonoBehaviour {
             bullet.Seek(target);
     }
 
+    void Buff(){
+        //Returns all objects in a radius and a position as the center
+        Collider[] objectsInRadius = Physics.OverlapSphere(transform.position, buff_range);
+        foreach (var collider in objectsInRadius)
+        {   
+            //If the thing that I collided with is an enemy
+            if(collider.tag == "Turret")
+            {
+                //Buff that Turret
+                //Debug.Log("Buffing each turret");
+                BuffTurret(collider.gameObject);
+
+            }
+        }
+
+    }
+
+    private void BuffTurret(GameObject turret_to_be_buffed){
+
+        //Debug.Log("Buffing...");
+		Turret turret_to_buff = turret_to_be_buffed.GetComponent<Turret>();
+		Bullet bullet_to_buff = turret_to_buff.bulletPrefab.GetComponent<Bullet>();
+        if(turret_to_buff != null){
+			//If the turret doesn't use a laser It's not a buff tower
+			if(!turret_to_buff.useLaser && !turret_to_buff.buff_tower){
+				bullet_to_buff = turret_to_buff.bulletPrefab.GetComponent<Bullet>();
+				//These buffs affect the bullet attached to the turret not the turret itself
+                if(bullet_to_buff != null){
+                    Debug.Log(bullet_to_buff.damage);
+                    bullet_to_buff.damage *= (int)_buff_multiplier;
+                }
+                if(bullet_to_buff != null){
+                    bullet_to_buff.explosionRadius *= (int)_buff_multiplier;
+                }
+                turret_to_buff.range *= _buff_multiplier;	
+                turret_to_buff.fireRate *= _buff_multiplier;
+			}
+            else
+			{
+                //Debug.Log("Im buffing the laser");
+                turret_to_buff.range *= _buff_multiplier;	
+                turret_to_buff.damageOverTime *= _buff_multiplier;
+                turret_to_buff.fireRate *= _buff_multiplier;
+				
+			}
+        }
+	}
+
+    private void OnDestroy()
+    {
+        Debuff();
+    }
+
+    private void Debuff(){
+        //Returns all objects in a radius and a position as the center
+        Collider[] objectsInRadius = Physics.OverlapSphere(transform.position, buff_range);
+        foreach (var collider in objectsInRadius)
+        {   
+            //If the thing that I collided with is an enemy
+            if(collider.tag == "Turret")
+            {
+                //Buff that Turret
+                //Debug.Log("Buffing each turret");
+                DebuffTurret(collider.gameObject);
+
+            }
+        }
+    }
+
+    private void DebuffTurret(GameObject turret_to_be_buffed){
+        Turret turret_to_buff = turret_to_be_buffed.GetComponent<Turret>();
+		Bullet bullet_to_buff = turret_to_buff.bulletPrefab.GetComponent<Bullet>();
+        if(turret_to_buff != null){
+			//If the turret doesn't use a laser It's not a buff tower
+			if(!turret_to_buff.useLaser && !turret_to_buff.buff_tower){
+				bullet_to_buff = turret_to_buff.bulletPrefab.GetComponent<Bullet>();
+				//These buffs affect the bullet attached to the turret not the turret itself
+                if(bullet_to_buff != null){
+                    Debug.Log(bullet_to_buff.damage);
+                    bullet_to_buff.damage /= (int)_buff_multiplier;
+                }
+                if(bullet_to_buff != null){
+                    bullet_to_buff.explosionRadius /= (int)_buff_multiplier;
+                }
+                turret_to_buff.range /= _buff_multiplier;	
+                turret_to_buff.fireRate /= _buff_multiplier;
+			}
+            else
+			{
+                //Debug.Log("Im buffing the laser");
+                turret_to_buff.range /= _buff_multiplier;	
+                turret_to_buff.damageOverTime /= _buff_multiplier;
+                turret_to_buff.fireRate /= _buff_multiplier;
+				
+			}
+        }
+    }
+
     void OnDrawGizmosSelected()
 	{
 		Gizmos.color = Color.red;
 		Gizmos.DrawWireSphere(transform.position, range);	
 	}
+
+
 }
